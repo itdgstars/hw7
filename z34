@@ -1,0 +1,16 @@
+def per(str):
+    str = str.split()
+    list_per = []
+    for word in str:
+        sum_w = 0
+        for i in word:
+            if i in 'аеёиоуыэюя':
+                sum_w += 1
+        list_per.append(sum_w)
+    return len(list_per) == list_per.count(list_per[0])
+
+str_per = 'пара-ра-рам рам-пам-папам па-ра-па-дам'
+if per(str_per):
+    print('Парам пам-пам')
+else:
+    print('Пам парам')
